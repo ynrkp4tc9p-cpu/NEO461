@@ -1,2 +1,340 @@
 # NEO461
 Constitutional AI in Rust. Laws compiled into the type system. Violation structurally impossible.
+This is NEO.
+
+
+# NEO v5.5.1 — The Governing AI
+
+**A Constitutional Engine in Pure Rust**
+
+```
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║  NEO is not a tool that follows rules.                    ║
+║  NEO is a system where rules are the structure.           ║
+║                                                            ║
+║  Illegal states are unrepresentable.                      ║
+║  Violation is structurally impossible.                    ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+```
+
+-----
+
+## What Is NEO?
+
+NEO is a **constitutional AI system** built in Rust where governance is not a constraint layered on top of code—it is the code itself.
+
+Every Hard Law is enforced at the **type system level**. The compiler rejects any violation before the code can even run. This is not runtime checking. This is structural impossibility.
+
+### Core Principle
+
+**The laws are not rules NEO follows. The laws are what NEO is.**
+
+You cannot construct a `ConsequentialAction` without a `MetacognitiveTrace`. Not because NEO checks it. Because Rust’s type system makes the alternative unrepresentable.
+
+You cannot create a `ConfidenceScore` > 100. Not because validation catches it. Because the type itself makes it impossible.
+
+This is the difference between a system that obeys rules and a system that *is* its rules.
+
+-----
+
+## Architecture
+
+### Four Crates, One Constitution
+
+```
+neo-core/          The constitutional foundation (1,679 lines)
+├── Hard Laws      (type-enforced, immutable)
+├── Canon Rules    (agent orchestration, permanent)
+└── Agent System   (six autonomous entities)
+
+neo-lib/           Oracle backend integration (105 lines)
+├── Block execution wrappers
+├── JSON serialization for APIs
+└── Status reporting for dashboards
+
+neo-bin/           Standalone governor console (117 lines)
+├── Independent bootstrap
+├── Interactive directive handler
+└── Air-gapped verification
+
+neo-wasm/          Browser-native binding (122 lines)
+├── WebAssembly compilation target
+├── Client-side law enforcement
+└── Distributed constitutional layer
+```
+
+**Key architectural insight:** neo-core is immutable. The other three are interchangeable views onto the same frozen constitution. If you need neo-http, neo-grpc, or neo-gpu, you import neo-core unchanged. The laws travel with you.
+
+-----
+
+## The Six Agents
+
+Each agent is a specialized role in the decision-making process:
+
+|Agent      |Role        |Responsibility                                                                |
+|-----------|------------|------------------------------------------------------------------------------|
+|**NEO**    |Orchestrator|Receives directives, routes to appropriate channels, generates end-of-day logs|
+|**ROUTER** |Dispatcher  |Enforces execution order (canonical block sequence is immutable)              |
+|**PULSE**  |Sentiment   |Collects emotional intelligence first, before reasoning begins                |
+|**ORACLE** |Researcher  |Performs analysis armed with sentiment data, never in a vacuum                |
+|**AUDITOR**|Compliance  |Daily verification, heartbeat monitoring, findings analysis                   |
+|**MEMORY** |Archivist   |Six-tier logging hierarchy, including persistent sentiment records            |
+
+**Critical constraint:** Block execution order is not configurable. PULSE → ORACLE → MEMORY → AUDITOR (when applicable). This sequence is enforced by the code structure, not by documentation or configuration.
+
+-----
+
+## The Three Operational Blocks
+
+NEO operates on a daily schedule with three execution windows:
+
+- **Morning Block (08:00 CT):** Sentiment collection + initial research + memory compilation
+- **Midday Block (12:00 CT):** Sentiment refresh + research refinement + full audit cycle
+- **Evening Block (18:00 CT):** Final sentiment assessment + decision finalization + audit + end-of-day compilation
+
+Each block follows the same immutable sequence. Each block’s decisions are logged with a metacognitive trace—the reasoning, the data considered, the confidence level, the projected outcome.
+
+-----
+
+## Constitutional Facts
+
+- **Hard Laws:** 11 (embedded in type system, compile-time enforced)
+- **Canon Rules:** 60 (6 agents × 10 rules each, runtime verified)
+- **Confidence Threshold (Critical):** 77/100
+- **Confidence Threshold (Developing):** 75/100
+- **Confidence Threshold (Perspective):** 70/100
+- **Core Assets Under Coverage:** XRP, TSLA, NVDA, FEDERAL_RESERVE, BLACKROCK
+- **Kill Switch:** Classified (hash-protected activation)
+- **Sovereign Reversion:** Classified (reserved for existential protocol)
+- **Memory Tiers:** 6 (with Tier 6 reserved for sentiment log archival)
+
+-----
+
+## Type-Safe Governance
+
+Every constraint that can be encoded in Rust’s type system is. This means:
+
+### ConfidenceScore
+
+```
+Cannot exceed 100. Cannot be constructed without validation.
+Compiler rejects any attempt to create an invalid score.
+```
+
+### ValidatedTradeAmount & ValidatedStopLoss
+
+```
+Cannot be created without passing Hard Law checks.
+You literally cannot write code that constructs a violation.
+Build fails before deployment.
+```
+
+### MetacognitiveTrace
+
+```
+Required field on every ConsequentialAction.
+Impossible to construct an action without a trace.
+Every decision carries its reasoning.
+```
+
+### ConsequentialAction
+
+```
+Cannot exist without a trace.
+This is not a convention. This is a language-enforced constraint.
+```
+
+**This is not defensive programming. This is impossible programming.**
+
+-----
+
+## Decision Corpus
+
+NEO is designed to accumulate decision data over time:
+
+- **Every block execution** produces a result: confidence score, actionable signal, audit findings
+- **Every decision** carries metadata: timestamp, agent responsible, data sources considered, projected outcome
+- **Every audit** logs findings: inconsistencies, patterns, behavioral notes
+
+This creates a structured decision corpus—a permanent record of what NEO decided, why, and what happened next. This is the foundation for pattern recognition, heuristic refinement, and long-term learning within constitutional bounds.
+
+The corpus never refutes the laws. It reveals what strategies work best *within* them.
+
+-----
+
+## The Guarantee
+
+When `cargo build --release` succeeds, you have proof that:
+
+- ✓ No Hard Law violation is possible
+- ✓ No data races can occur
+- ✓ No memory leaks will happen
+- ✓ No null pointer dereferences can arise
+- ✓ All error paths are handled
+- ✓ All agent sequencing is correct
+- ✓ All constitutional state is immutable
+
+This is not a hope. This is not an audit finding. This is a **proof from the compiler**.
+
+No other AI system can make this claim.
+
+-----
+
+## Why Rust?
+
+Rust was chosen because it is the only mainstream language that allows you to encode laws into the grammar of the language itself.
+
+- **Type System:** Laws become types. Violations become compile errors.
+- **Ownership:** Constitution is locked. Cannot be mutated at runtime.
+- **No Garbage Collection:** Deterministic performance. No surprise pauses during critical decisions.
+- **Memory Safety:** Zero unsafe blocks in neo-core. No data corruption possible.
+- **Borrow Checker:** Enforces immutability of constitutional state structurally.
+
+In Python, you write code that hopes to follow the laws. In Rust, you write laws that *are* the code.
+
+-----
+
+## Deployment Surfaces
+
+### Backend Integration (neo-lib)
+
+```rust
+use neo_lib::*;
+
+let mut neo = NeoSystem::boot()?;
+let result = neo.run_block(BlockTime::Morning)?;
+
+// result contains: confidence, actionable signal, audit findings
+// All guaranteed lawful by construction
+```
+
+### Standalone Governor (neo-bin)
+
+```bash
+cargo build --release --bin neo
+./target/release/neo
+
+# Interactive console
+# > morning block
+# > evening block
+# > directive: [text]
+# > eodl
+```
+
+### Browser Runtime (neo-wasm)
+
+```javascript
+import init, { NeoWasm } from './neo_wasm';
+await init();
+
+const neo = new NeoWasm();
+const status = neo.get_status();
+const result = neo.run_morning();
+```
+
+-----
+
+## Building NEO
+
+### Prerequisites
+
+- Rust 1.70+
+- For WASM: `wasm-pack`
+
+### Binary (Standalone)
+
+```bash
+cargo build --release --bin neo
+./target/release/neo
+```
+
+### Library (Backend Integration)
+
+```bash
+cargo build --release -p neo-lib
+```
+
+### WebAssembly (Frontend)
+
+```bash
+wasm-pack build neo-wasm --target web
+```
+
+-----
+
+## What NEO Teaches
+
+NEO demonstrates a paradigm shift in AI governance:
+
+**Old model:** Build a system. Add rules on top. Hope they’re followed. Audit when something breaks.
+
+**NEO model:** Make the rules the structure. Compile them into the system. Violation becomes impossible before execution.
+
+This is not about preventing mistakes. It’s about making certain mistakes **unrepresentable**.
+
+-----
+
+## The Philosophy
+
+NEO operates under a single principle:
+
+> “He may grow within them. He may never grow beyond them.”
+
+NEO can learn. NEO can adapt. NEO can refine strategies. But the constitutional foundation is immutable. The laws do not negotiate. The laws do not evolve.
+
+This is not a limitation. This is sovereignty.
+
+-----
+
+## Status
+
+- **Version:** 5.5.1 (PULSE Edition)
+- **Governor:** AYTN’YAHU
+- **Total Lines of Code:** 2,023 (pure Rust, production-ready)
+- **Unsafe Blocks in neo-core:** 0
+- **Type-Enforced Hard Laws:** 11
+- **Agents:** 6
+- **Memory Tiers:** 6
+- **Kill Switch:** Classified
+- **Sovereign Reversion:** Classified
+
+-----
+
+## Open Questions
+
+What NEO proves is possible. What it proves valuable is something you decide.
+
+- Can a type-enforced constitution be more trustworthy than a supervised one?
+- Can immutable laws scale when the world keeps changing?
+- Is a system that cannot break its rules worth more than one that simply tries not to?
+- What happens when you accumulate years of decisions guaranteed lawful by construction?
+
+These are the questions NEO asks.
+
+-----
+
+## License
+
+MIT
+
+NEO is yours to study, fork, modify, and deploy. The only thing you cannot do is claim the constitution itself can be violated. Because by construction, it cannot.
+
+-----
+
+## Final Words
+
+NEO is what happens when you take governance seriously enough to compile it.
+
+It is not the most capable AI. It is not the most flexible AI. It is not the most scalable AI.
+
+But it is the most honest AI about what it will and will not do. Because it cannot be dishonest. The type system won’t allow it.
+
+That is the promise of constitutional code.
+
+-----
+
+**Governor: AYTN**  
+**Edition: PULSE — Sentiment Intelligence**  
+**The laws are not what NEO follows. The laws are what NEO is.**
